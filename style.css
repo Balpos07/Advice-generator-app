@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+img{
+    max-width: 100%;
+}
+body{
+    font-family: 'Manrope', sans-serif;
+    font-size: 16px;
+    background-color: hsl(217, 19%, 24%);
+    padding: 1.25rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 0.1px);
+}
+p{
+    font-size: 28px;
+    line-height: 1.5;
+}
+.container{
+    background-color: hsl(217, 19%, 38%);
+    padding: 1.25rem 1.25rem 2rem;
+    border-radius: 1rem;
+   position: relative;
+}
+.container h1{
+    color: hsl(150, 100%, 66%);
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+    font-size: 0.625rem;
+    margin-bottom: 1rem;
+}
+.container p{
+ margin-bottom: 2rem;
+ color: hsl(193, 38%, 86%);
+}
+.picture img{
+    background-color:  hsl(217, 19%, 38%);
+    margin-bottom: 1rem;
+    position: relative;
+}
+.picture::before {
+    content: " ";
+    width: 40%;
+    height: 1px;
+    background-color: hsl(193, 38%, 86%);
+    right: 1.25rem;
+    bottom: 3.8rem;
+    position: absolute;
+    display: block;
+    z-index: 99;
+}
+.picture::after {
+    content: " ";
+    width: 45%;
+    height: 1px;
+    background-color: hsl(193, 38%, 86%);
+    left: 0;
+    bottom: 1.7rem;
+    position: relative;
+    display: block;
+}
+.mobile{
+    display: none;
+}
+.container button{
+    background-color: hsl(150, 100%, 66%);
+    padding: 1.25rem;
+    border: none;
+    border-radius: 50%;
+    transition: background-color 0.3s ease-in-out;
+    cursor: pointer;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.container button:hover {
+    background-color: hsl(150, 53%, 44%);
+}
+.attribution{
+    font-size: 11px;
+    text-align: center;
+    margin-top: 4rem;
+    color: hsl(193, 38%, 86%);
+}
+.attribution a{
+    color: hsl(228, 45%, 44%);
+    transition: color 0.3s ease-in-out;
+}
+.attribution a:hover{
+    color: hsl(228, 41%, 48%);
+}
+@media (min-width: 500px) {
+    .container{
+        max-width: 480px;
+    }
+    .mobile{
+        display: block;
+    }
+    .desktop{
+        display: none;
+    }
+}
